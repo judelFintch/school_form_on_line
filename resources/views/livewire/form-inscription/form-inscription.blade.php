@@ -1,4 +1,5 @@
 <div>
+{{$section}}
 <section class="mt-10 md:mt-12">
     <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
       <div class="pb-10">
@@ -16,12 +17,12 @@
             <div class="grid gap-6 sm:grid-cols-2">
               <div class="space-y-2">
                 <label for="name" class="text-gray-600">Nom complet</label>
-                <input type="text" name="name" id="name" autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                <input wire:model='st_name' type="text" name="name" id="name" autocomplete="name" placeholder=" Ex Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2">
                 <label for="email" class="text-gray-600">Genre</label>
-                <select name="" id=""
+                <select wire:model='st_sexe' name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
                   <option value="masculin">Masculin</option>
                   <option value="feminin">Feminin</option>
@@ -30,37 +31,37 @@
 
               <div class="space-y-2">
                 <label for="name" class="text-gray-600">Date de naissance</label>
-                <input type="date" name="name" id="name" autocomplete="name"
+                <input wire:model='st_birthdate' type="date" name="name" id="name" autocomplete="name"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2">
                 <label for="email" class="text-gray-600">Lieu de naissance</label>
-                <input type="text" name="name" id="name" autocomplete="name" placeholder="Kaniama"
+                <input wire:model='st_birthdayplace' type="text" name="name" id="name" autocomplete="name" placeholder="Kaniama"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
 
               <div class="space-y-2">
                 <label for="email" class="text-gray-600">Langue(s) parlée(s) </label>
-                <input type="text" name="name" id="name" autocomplete="name" placeholder="Swahili, Francais, Anglais"
+                <input wire:model='st_spoken' type="text" name="name" id="name" autocomplete="name" placeholder="Swahili, Francais, Anglais"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
 
               <div class="space-y-2">
                 <label for="email" class="text-gray-600">Telephone </label>
-                <input type="tel" name="name" id="name" autocomplete="name" placeholder="+243 97 24 44 966"
+                <input wire:model='st_st_phone' type="tel" name="name" id="name" autocomplete="name" placeholder="+243 97 24 44 966"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
 
               <div class="space-y-2">
                 <label for="province-origine" class="text-gray-600">Province d'origine * </label>
-                <input type="text" name="province-origine" id="province-origine" autocomplete="province-origine"
+                <input wire:model='st_province' type="text" name="province-origine" id="province-origine" autocomplete="province-origine"
                   placeholder="Haut lomami"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
 
               <div class="space-y-2">
                 <label for="district-origine" class="text-gray-600">District d'origine * </label>
-                <input type="text" name="district-origine" id="district-origine" autocomplete="district-origine"
+                <input wire:model='st_district' type="text" name="district-origine" id="district-origine" autocomplete="district-origine"
                   placeholder="Haut lomami"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
@@ -68,13 +69,13 @@
 
               <div class="space-y-2">
                 <label for="pays-origine" class="text-gray-600">Pays d'origine :* </label>
-                <input type="text" name="pays-origine" id="pays-origine" autocomplete="pays-origine"
+                <input wire:model='st_pays' type="text" name="pays-origine" id="pays-origine" autocomplete="pays-origine"
                   placeholder="Haut lomami"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2 sm:col-span-2">
                 <label for="adresse-p" class="text-gray-600">Adresse physique de l'éléve </label>
-                <input type="text" name="adresse-p" id="adresse-p" autocomplete="adresse-p"
+                <input  wire:model='st_addres' type="text" name="adresse-p" id="adresse-p" autocomplete="adresse-p"
                   placeholder="Q/Kasapa, Av circulaire, No 293"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
@@ -90,24 +91,24 @@
             <div class="grid gap-6 sm:grid-cols-2">
               <div class="space-y-2">
                 <label for="name-father" class="text-gray-600">Noms du père:*</label>
-                <input type="text" name="name-father" id="name-father" autocomplete="name"
+                <input wire:model='first_parent_name' type="text" name="name-father" id="name-father" autocomplete="name"
                   placeholder="Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2">
                 <label for="name-mother" class="text-gray-600">Noms de la mère:*</label>
-                <input type="text" name="name-mother" id="name-mother" autocomplete="name"
+                <input wire:model='second_parent_name' type="text" name="name-mother" id="name-mother" autocomplete="name"
                   placeholder="Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2">
                 <label for="contact1" class="text-gray-600">Contact Parent 1</label>
-                <input type="tel" name="contact1" id="contact1" autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                <input wire:model='first_contact' type="tel" name="contact1" id="contact1" autocomplete="name" placeholder="Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
               <div class="space-y-2">
                 <label for="contact2" class="text-gray-600">Contact Parent 2</label>
-                <input type="tel" name="contact2" id="contact2" autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                <input wire:model='second_contact' type="tel" name="contact2" id="contact2" autocomplete="name" placeholder="Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
             </div>
@@ -122,25 +123,27 @@
             <div class="grid gap-6 sm:grid-cols-2">
               <div class="space-y-2">
                 <label for="name-father" class="text-gray-600">Sections :*</label>
-                <select name="" id=""
+                <select wire:click='sections()' wire:model="section" name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
-                  <option value="">Maternelle</option>
-                  <option value="">Primaire</option>
-                  <option value="">Secondaire</option>
+                  <option value="1">Maternelle</option>
+                  <option value="2">Primaire</option>
+                  <option value="3">Secondaire</option>
                 </select>
               </div>
               <div class="space-y-2">
                 <label for="name-mother" class="text-gray-600">Option :*</label>
                 <select name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
-                  <option value="">Maternelle</option>
-                  <option value="">Primaire</option>
-                  <option value="">Secondaire</option>
+                 @foreach($section_values as $option)
+                     <option>{{$option}}</option>
+                 @endforeach
+
+                  
                 </select>
               </div>
               <div class="space-y-2">
                 <label for="contact1" class="text-gray-600">Classe :*</label>
-                <select name="" id=""
+                <select wire:model="classe" name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
                   <option value="">Maternelle</option>
                   <option value="">Primaire</option>
@@ -160,7 +163,7 @@
               <div class="space-y-2">
                 <label for="name-father" class="text-gray-600">Maladie(s) chronique(s) ou allergie(s) à signaler
                   :</label>
-                <input type="text" name="name-father" id="name-father" autocomplete="name"
+                <input wire:model="health" type="text" name="name-father" id="name-father" autocomplete="name"
                   placeholder="Kayembe Mulombo Enock"
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
