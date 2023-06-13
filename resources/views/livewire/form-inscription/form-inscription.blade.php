@@ -65,25 +65,7 @@
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
               </div>
 
-              <div class="space-y-2">
-                <label for="village-origine" class="text-gray-600">Village d'origine * </label>
-                <input type="text" name="village-origine" id="village-origine" autocomplete="village-origine"
-                  placeholder="Haut lomami"
-                  class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
-              </div>
 
-              <div class="space-y-2">
-                <label for="collectivite-origine" class="text-gray-600">Collectivité d'origine :* </label>
-                <input type="text" name="collectivite-origine" id="collectivite-origine"
-                  autocomplete="collectivite-origine" placeholder="Haut lomami"
-                  class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
-              </div>
-              <div class="space-y-2">
-                <label for="territoire-origine" class="text-gray-600">Territoire d'origine :* </label>
-                <input type="text" name="territoire-origine" id="territoire-origine" autocomplete="territoire-origine"
-                  placeholder="Haut lomami"
-                  class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
-              </div>
               <div class="space-y-2">
                 <label for="pays-origine" class="text-gray-600">Pays d'origine :* </label>
                 <input type="text" name="pays-origine" id="pays-origine" autocomplete="pays-origine"

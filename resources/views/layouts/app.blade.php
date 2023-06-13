@@ -20,7 +20,7 @@
             <a href="" class="flex items-center gap-x-2">
             <img src="favicon.png" alt="logo" class="w-auto h-10">
             <div class="flex flex-wrap">
-                <span class="w-full text-lg sm:text-xl font-bold text-gray-800">BERAKAH</span>
+                <span class="w-full text-lg sm:text-xl font-bold text-gray-800">{{ config('app.name')}}</span>
                 <span class="w-full text-xs font-normal text-blue-600">Complexe-scolaire</span>
             </div>
             </a>
