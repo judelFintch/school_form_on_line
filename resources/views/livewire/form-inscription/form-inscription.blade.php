@@ -127,7 +127,9 @@
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
                   <option value="1">Maternelle</option>
                   <option value="2">Primaire</option>
-                  <option value="3">Secondaire</option>
+                  <option value="3">EB</option>
+                  <option value="4">Secondaire General</option>
+                  <option value="5">Secondaire Technique</option>
                 </select>
               </div>
               <div class="space-y-2">
@@ -145,7 +147,7 @@
                 <label for="contact1" class="text-gray-600">Classe :*</label>
                 <select wire:model="classe" name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
-                  <option value="">Maternelle</option>
+                  <option value=""></option>
                   <option value="">Primaire</option>
                   <option value="">Secondaire</option>
                 </select>

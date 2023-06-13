@@ -22,10 +22,13 @@ class FormInscription extends Component
     }
 
     public function sections(){
-        //$mat_options =array('Creche','Premat','Maternelle');
-       
+
+        //a mettre dans une base de donnee
+        $mat_options =array('Creche','Premat','Maternelle');
         $prim_options =array('Primaire');
-        $sec_options =array('ED BASE','ELECTE','AGRO');
+        $sec_eb_options =array('Enseignement de base');
+        $sec_gen_options =array('Scientifique','Litteraire','Pedagogie General');
+        $sec_tech_options =array('Construction et Architecture','Coupe et couture','Electricite','Commercial et Gestion','Hotellerie et Restaurant');
         
         if($this->section == 1){
             $this->section_values = $mat_options;
@@ -36,8 +39,17 @@ class FormInscription extends Component
         }
 
         if($this->section == 3){
-            $this->section_values = $sec_options;
+            $this->section_values = $sec_eb_options;
         }
+
+        if($this->section == 4){
+            $this->section_values = $sec_gen_options;
+        }
+
+        if($this->section == 5){
+            $this->section_values = $sec_tech_options;
+        }
+
 
 
 
