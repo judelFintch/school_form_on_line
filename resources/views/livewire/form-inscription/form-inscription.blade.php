@@ -1,5 +1,4 @@
 <div>
-{{$section}}
 <section class="mt-10 md:mt-12">
     <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
       <div class="pb-10">
@@ -130,15 +129,16 @@
                   <option value="3">EB</option>
                   <option value="4">Secondaire General</option>
                   <option value="5">Secondaire Technique</option>
+                  
                 </select>
               </div>
               <div class="space-y-2">
                 <label for="name-mother" class="text-gray-600">Option :*</label>
                 <select name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
-                 @foreach($section_values as $option)
-                     <option>{{$option}}</option>
-                 @endforeach
+                    @foreach($section_values as $option)
+                        <option>{{$option}}</option>
+                    @endforeach
 
                   
                 </select>
@@ -147,9 +147,10 @@
                 <label for="contact1" class="text-gray-600">Classe :*</label>
                 <select wire:model="classe" name="" id=""
                   class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400">
-                  <option value=""></option>
-                  <option value="">Primaire</option>
-                  <option value="">Secondaire</option>
+                  @foreach($classe_values as $classe)
+                        <option>{{$classe}}</option>
+                    @endforeach
+                 
                 </select>
               </div>
             </div>
