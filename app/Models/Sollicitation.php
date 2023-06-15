@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Sollicitation extends Model
 {
     use HasFactory;
+
+    protected $fillable =['section','options','classe','id_student'];
 }
