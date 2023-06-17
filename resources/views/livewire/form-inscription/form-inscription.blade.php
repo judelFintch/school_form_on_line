@@ -145,6 +145,7 @@
                             <label for="name-father" class="text-gray-600">Sections :*</label>
                             <select wire:change='sections()' wire:model="section" name="" id=""
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
+                                <option value="">-- Choix --</option>
                                 <option value="1">Creche</option>
                                 <option value="2">Pre-mat</option>
                                 <option value="3">Maternelle</option>
@@ -152,20 +153,17 @@
                                 <option value="5">EB</option>
                                 <option value="6">Secondaire General</option>
                                 <option value="7">Secondaire Technique</option>
-
                             </select>
 
                         </div>
                         <div class="space-y-2">
                             <label for="name-mother" class="text-gray-600">Option :*</label>
-                            <select wire:model.defer='options_values' name="" id=""
+                            <select wire:change='options_values' 
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
                                
                                 @foreach($section_values as $option)
-                                <option value="{{$option}}">{{$option}}</option>
+                                    <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
-
-
                             </select>
                         </div>
                         <div class="space-y-2">

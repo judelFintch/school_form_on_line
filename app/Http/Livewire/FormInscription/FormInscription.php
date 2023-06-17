@@ -19,8 +19,8 @@ class FormInscription extends Component
 
 public function mount(){
 //a refactorer Dont repeat
-        $this->section_values =array('Creche');
-        $this->classe_values= array('Creche');
+      //  $this->section_values =array('');
+        //$this->classe_values= array('');
       
 }
 
@@ -42,11 +42,15 @@ public function sections(){
         $classe_prim= array('1','2','3','4','5','6');
 
         if($this->section == 1){
+
+       
+            $this->reset('section_values');
             $this->section_values = $creche_options;
             $this->classe_values =$classe_creche;
-            }
+        }
 
         if($this->section == 2){
+            $this->reset('section_values');
             $this->section_values = $premat_options;
             $this->classe_values =$classe_premat;
         }
