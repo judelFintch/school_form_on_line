@@ -17,7 +17,7 @@
                         <div class="space-y-2">
                             <label for="name" class="text-gray-600">Nom complet</label>
                             <input wire:model='st_name' type="text" name="name" id="name" autocomplete="name"
-                                placeholder=" Ex Kayembe Mulombo Enock"
+                                placeholder=" Ex Guy kode"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_name') is-invalid @enderror" />
 
                             @error('st_name') <span class="error">{{ $message }}</span> @enderror
@@ -41,7 +41,7 @@
                         <div class="space-y-2">
                             <label for="email" class="text-gray-600">Lieu de naissance</label>
                             <input wire:model='st_birthdayplace' type="text" name="name" id="name" autocomplete="name"
-                                placeholder="Kaniama"
+                                placeholder="Lubumbashi"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_birthdayplace') is-invalid @enderror" />
                             @error('st_birthdayplace') <span class="error">{{ $message }}</span> @enderror
                         </div>
@@ -57,7 +57,7 @@
                         <div class="space-y-2">
                             <label for="email" class="text-gray-600">Telephone </label>
                             <input wire:model='st_phone' type="tel" name="name" id="name" autocomplete="name"
-                                placeholder="+243 97 24 44 966"
+                                placeholder="+243 09 76 93 80 94"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_phone') is-invalid @enderror" />
                             @error('st_phone') <span class="error">{{ $message }}</span> @enderror
                         </div>
@@ -65,7 +65,7 @@
                         <div class="space-y-2">
                             <label for="province-origine" class="text-gray-600">Province d'origine * </label>
                             <input wire:model='st_province' type="text" name="province-origine" id="province-origine"
-                                autocomplete="province-origine" placeholder="Haut lomami"
+                                autocomplete="province-origine" placeholder="Province "
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_province') is-invalid @enderror" />
                             @error('st_province') <span class="error">{{ $message }}</span> @enderror
                         </div>
@@ -73,7 +73,7 @@
                         <div class="space-y-2">
                             <label for="district-origine" class="text-gray-600">District d'origine * </label>
                             <input wire:model='st_district' type="text" name="district-origine" id="district-origine"
-                                autocomplete="district-origine" placeholder="Haut lomami"
+                                autocomplete="district-origine" placeholder="District"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_district') is-invalid @enderror" />
                             @error('st_district') <span class="error">{{ $message }}</span> @enderror
                         </div>
@@ -104,30 +104,30 @@
                 <div class="">
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div class="space-y-2">
-                            <label for="name-father" class="text-gray-600">Noms du père:*</label>
+                            <label for="name-father" class="text-gray-600">Noms du titeur:*</label>
                             <input wire:model='first_parent_name' type="text" name="name-father" id="name-father"
-                                autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                                autocomplete="name" placeholder="Nom titeur"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_parent_name') is-invalid @enderror" />
                             @error('first_parent_name') <span class="error">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="name-mother" class="text-gray-600">Noms de la mère:*</label>
+                            <label for="name-mother" class="text-gray-600">Nom du second titeur:*</label>
                             <input wire:model='second_parent_name' type="text" name="name-mother" id="name-mother"
-                                autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                                autocomplete="name" placeholder="Nom titeur "
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('second_parent_name') is-invalid @enderror" />
                             @error('second_parent_name') <span class="error">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="contact1" class="text-gray-600">Contact Parent 1</label>
+                            <label for="contact1" class="text-gray-600">Contact Titeur</label>
                             <input wire:model='first_contact' type="tel" name="contact1" id="contact1"
-                                autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                                autocomplete="name" placeholder="Contact titeur 1"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror" />
                             @error('first_contact') <span class="error">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="contact2" class="text-gray-600">Contact Parent 2</label>
+                            <label for="contact2" class="text-gray-600">Contact Second Titeur</label>
                             <input wire:model='second_contact' type="tel" name="contact2" id="contact2"
-                                autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                                autocomplete="name" placeholder="Nom titeur 2"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  " />
 
                         </div>
@@ -158,24 +158,28 @@
                         </div>
                         <div class="space-y-2">
                             <label for="name-mother" class="text-gray-600">Option :*</label>
-                            <select wire:change='options_values' 
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
-                               
+                            
+                            <select wire:model='options_values' 
+                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  ">
+                                <option value="" selected>Choix Option</option>
                                 @foreach($section_values as $option)
                                     <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
+
+                            @json($options_values)
                         </div>
                         <div class="space-y-2">
-                            <label for="contact1" class="text-gray-600">Classe :*</label>
+                            <label for="contact1" class="text-gray-600">Classe : *</label>
                             <select wire:model="classe" name="" id=""
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
+                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror ">
                                 
                                 @foreach($classe_values as $classe)
                                 <option>{{$classe}}</option>
                                 @endforeach
 
                             </select>
+                            @error('first_contact') <span class="error">{{ $message }}</span> @enderror
                         </div>
 
                     </div>
