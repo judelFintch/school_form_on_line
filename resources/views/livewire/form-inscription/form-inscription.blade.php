@@ -1,14 +1,17 @@
 <div>
 
-
-    @if (session()->has('message'))
-    <div class="alert alert-success">
-      <h1>  {{ session('message') }}</h1>
-    </div>
-    @endif
-
+    <section class="mt-10 md:mt-12">
+        <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
+            @if (session()->has('message'))
+            <div class="alert alert-success">
+                <h1 class="text-2xl font-bold text-gray-900"> {{ session('message') }}  pour une autre reservation <a href="{{route('form.index')}}">cliquez ici</a></h1>
+            </div>
+            @endif
+        </div>
+    </section>
 
     @if($form_view)
+
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
             <div class="pb-10">
@@ -156,7 +159,7 @@
                             <select wire:change='section()' wire:model="section" name="" id=""
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_phone') is-invalid @enderror ">
                                 <option value="" selected>-- Selectionnez une Section --</option>
-                                <option value="1" >Creche</option>
+                                <option value="1">Creche</option>
                                 <option value="2">Pre-mat</option>
                                 <option value="3">Maternelle</option>
                                 <option value="4">Primaire</option>
@@ -174,13 +177,13 @@
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_phone') is-invalid @enderror  ">
                                 <option value="" selected>----Selectionnez une option-----</option>
                                 @foreach($section_values as $option)
-                                    <option value="{{$option}}">{{$option}}</option>
+                                <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
                             @error('options_values') <span class="error">{{ $message }}</span> @enderror
 
 
-                            
+
                         </div>
                         <div class="space-y-2">
                             <label for="contact1" class="text-gray-600">Classe : *</label>
@@ -189,7 +192,7 @@
                                 <option value="" selected>-- Selectionnez une classe --</option>
 
                                 @foreach($classe_values as $classe)
-                                 <option>{{$classe}}</option>
+                                <option>{{$classe}}</option>
                                 @endforeach
 
                             </select>
@@ -211,7 +214,7 @@
                                 signaler
                                 :</label>
                             <input wire:model="health" type="text" name="name-father" id="name-father"
-                                autocomplete="name" placeholder="Kayembe Mulombo Enock"
+                                autocomplete="name" placeholder="Allergies"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400" />
                         </div>
                     </div>
@@ -226,5 +229,5 @@
 
         </div>
     </section>
-@endif
+    @endif
 </div>
