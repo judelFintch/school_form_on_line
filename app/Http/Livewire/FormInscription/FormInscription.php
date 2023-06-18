@@ -14,6 +14,12 @@ class FormInscription extends Component
     public $first_parent_name, $second_parent_name, $first_contact, $second_contact;
     public $section, $options, $classe, $health;
     public $section_values = [], $classe_values = [], $options_values;
+    public $form_view;
+
+
+    public function mount(){
+        $this->form_view =false;
+    }
 
     public function section()
     {
@@ -48,11 +54,7 @@ class FormInscription extends Component
                 'classe' => ['3', '4', '5', '6']
             ]
         ];
-
-
-    //    $this->sections = $sectionData[$this->section];
-
-
+    //    
         if (isset($sectionData[$this->section])) {
             $section = $sectionData[$this->section];
            $this->section_values = $section['options'];
@@ -89,8 +91,10 @@ class FormInscription extends Component
         'first_parent_name' => 'required',
         'second_parent_name' => 'required',
         'first_contact' => 'required',
-        'options_values' => 'required',
         'st_sexe' => 'required',
+        'classe' => 'required',
+        'options_values' => 'required',
+        'section' => 'required',
     ];
 
     public function render()
@@ -136,13 +140,15 @@ class FormInscription extends Component
             'id_student' => $students->id
            ]);
 
-           $this->resetfiled();
+           //$this->resetfiled();
 
            session()->flash('message','Reservation reussi');
 
 
         } catch (\Exception $e) {
-            session()->flash('message','Reservation echouee');
+
+            dd($e);
+            //session()->flash('message','Reservation echouee');
         }
     }
 

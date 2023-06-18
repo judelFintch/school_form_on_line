@@ -1,4 +1,14 @@
 <div>
+
+
+    @if (session()->has('message'))
+    <div class="alert alert-success">
+      <h1>  {{ session('message') }}</h1>
+    </div>
+    @endif
+
+
+    @if($form_view)
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
             <div class="pb-10">
@@ -8,11 +18,6 @@
                 <p class="text-xl font-bold text-gray-900">Annee scolaire : 2023-2024</p>
             </div>
 
-            @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{ session('message') }} Imprimer le recu
-            </div>
-            @endif
 
             <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200">
                 <h2 class="text-xl font-bold text-gray-900 mb-5">
@@ -135,7 +140,6 @@
                             <input wire:model='second_contact' type="tel" name="contact2" id="contact2"
                                 autocomplete="name" placeholder="Nom titeur 2"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  " />
-
                         </div>
                     </div>
                 </div>
@@ -150,8 +154,8 @@
                         <div class="space-y-2">
                             <label for="name-father" class="text-gray-600">Sections :*</label>
                             <select wire:change='section()' wire:model="section" name="" id=""
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
-                                <option value="" selected>-- Choix --</option>
+                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_phone') is-invalid @enderror ">
+                                <option value="" selected>-- Selectionnez une Section --</option>
                                 <option value="1" >Creche</option>
                                 <option value="2">Pre-mat</option>
                                 <option value="3">Maternelle</option>
@@ -160,18 +164,20 @@
                                 <option value="6">Secondaire General</option>
                                 <option value="7">Secondaire Technique</option>
                             </select>
+                            @error('section') <span class="error">{{ $message }}</span> @enderror
 
                         </div>
                         <div class="space-y-2">
                             <label for="name-mother" class="text-gray-600">Option :*</label>
 
                             <select wire:model='options_values'
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  ">
-                                <option value="" selected>Choix Option</option>
+                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_phone') is-invalid @enderror  ">
+                                <option value="" selected>----Selectionnez une option-----</option>
                                 @foreach($section_values as $option)
                                     <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
+                            @error('options_values') <span class="error">{{ $message }}</span> @enderror
 
 
                             
@@ -179,14 +185,15 @@
                         <div class="space-y-2">
                             <label for="contact1" class="text-gray-600">Classe : *</label>
                             <select wire:model="classe" name="" id=""
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror ">
+                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('classe') is-invalid @enderror ">
+                                <option value="" selected>-- Selectionnez une classe --</option>
 
                                 @foreach($classe_values as $classe)
-                                <option>{{$classe}}</option>
+                                 <option>{{$classe}}</option>
                                 @endforeach
 
                             </select>
-                            @error('first_contact') <span class="error">{{ $message }}</span> @enderror
+                            @error('classe') <span class="error">{{ $message }}</span> @enderror
                         </div>
 
                     </div>
@@ -219,4 +226,5 @@
 
         </div>
     </section>
+@endif
 </div>
