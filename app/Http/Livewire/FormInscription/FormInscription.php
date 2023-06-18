@@ -15,8 +15,9 @@ class FormInscription extends Component
     public $section, $options, $classe, $health;
     public $section_values = [], $classe_values = [], $options_values;
 
-    public function sections()
+    public function section()
     {
+
         $sectionData = [
             1 => [
                 'options' => ['Creche'],
@@ -48,9 +49,13 @@ class FormInscription extends Component
             ]
         ];
 
+
+    //    $this->sections = $sectionData[$this->section];
+
+
         if (isset($sectionData[$this->section])) {
             $section = $sectionData[$this->section];
-            $this->section_values = $section['options'];
+           $this->section_values = $section['options'];
             $this->classe_values = $section['classe'];
         } else {
             $this->section_values = [];
@@ -135,9 +140,13 @@ class FormInscription extends Component
 
            session()->flash('message','Reservation reussi');
 
-            
+
         } catch (\Exception $e) {
             session()->flash('message','Reservation echouee');
         }
+    }
+
+    public function select_section($id){
+        dd($id);
     }
 }

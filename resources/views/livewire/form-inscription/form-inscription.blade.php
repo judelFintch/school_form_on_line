@@ -149,10 +149,10 @@
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div class="space-y-2">
                             <label for="name-father" class="text-gray-600">Sections :*</label>
-                            <select wire:change='sections()' wire:model="section" name="" id=""
+                            <select wire:change='section()' wire:model="section" name="" id=""
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 ">
-                                <option value="">-- Choix --</option>
-                                <option value="1">Creche</option>
+                                <option value="" selected>-- Choix --</option>
+                                <option value="1" >Creche</option>
                                 <option value="2">Pre-mat</option>
                                 <option value="3">Maternelle</option>
                                 <option value="4">Primaire</option>
@@ -164,15 +164,15 @@
                         </div>
                         <div class="space-y-2">
                             <label for="name-mother" class="text-gray-600">Option :*</label>
-                            
-                            <select wire:model='options_values' 
+
+                            <select wire:model='options_values'
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  ">
                                 <option value="" selected>Choix Option</option>
                                 @foreach($section_values as $option)
                                     <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
-                            
+
 
                             @json($options_values)
                         </div>
@@ -180,7 +180,7 @@
                             <label for="contact1" class="text-gray-600">Classe : *</label>
                             <select wire:model="classe" name="" id=""
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror ">
-                                
+
                                 @foreach($classe_values as $classe)
                                 <option>{{$classe}}</option>
                                 @endforeach
