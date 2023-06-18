@@ -8,6 +8,12 @@
                 <p class="text-xl font-bold text-gray-900">Annee scolaire : 2023-2024</p>
             </div>
 
+            @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }} Imprimer le recu
+            </div>
+            @endif
+
             <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200">
                 <h2 class="text-xl font-bold text-gray-900 mb-5">
                     IDENTITE DE L'ELEVE
@@ -166,6 +172,7 @@
                                     <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
+                            
 
                             @json($options_values)
                         </div>

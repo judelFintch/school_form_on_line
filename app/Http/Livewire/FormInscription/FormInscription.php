@@ -3,10 +3,10 @@
 namespace App\Http\Livewire\FormInscription;
 
 use Livewire\Component;
-use App\Models\Students;
-use App\Models\Parents;
-use App\Models\Health;
-use App\Models\Sollicitation;
+use App\Models\Students as Students;
+use App\Models\Parents as Parents;
+use App\Models\Health  as Health;
+use App\Models\Sollicitation as Sollicitation;
 
 class FormInscription extends Component
 {
@@ -60,6 +60,18 @@ class FormInscription extends Component
         $this->options_values = null;
     }
 
+    public function resetfiled(){
+
+        $this->st_name ='';
+        $this->st_birthdate ='';
+        $this->st_birthdayplace ='';
+        $this->st_district ='';
+        $this->st_pays ='';
+        $this->st_province='';
+        $this->st_sexe ='';
+        $this->st_addres ='';
+    }
+
     protected $rules = [
         'st_name' => 'required',
         'st_birthdate' => 'required',
@@ -84,7 +96,7 @@ class FormInscription extends Component
 
     public function store()
     {
-        $this->validate();
+       $this->validate();
         try {
             $students = Students::create([
                 'name' => $this->st_name,
@@ -113,8 +125,19 @@ class FormInscription extends Component
                 'classe' => $this->classe,
                 'id_student' => $students->id
             ]);
+
+           $health = Health::create([
+            'health' => $this->health,
+            'id_student' => $students->id
+           ]);
+
+           $this->resetfiled();
+
+           session()->flash('message','Reservation reussi');
+
+            
         } catch (\Exception $e) {
-            dd($e);
+            session()->flash('message','Reservation echouee');
         }
     }
 }
