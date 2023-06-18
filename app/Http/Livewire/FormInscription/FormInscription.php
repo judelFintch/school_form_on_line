@@ -18,12 +18,11 @@ class FormInscription extends Component
 
 
     public function mount(){
-        $this->form_view =false;
+        $this->form_view =true;
     }
 
     public function section()
     {
-
         $sectionData = [
             1 => [
                 'options' => ["pas d'option"],
@@ -57,15 +56,14 @@ class FormInscription extends Component
     //    
         if (isset($sectionData[$this->section])) {
             $section = $sectionData[$this->section];
-           $this->section_values = $section['options'];
+            $this->section_values = $section['options'];
             $this->classe_values = $section['classe'];
         } else {
             $this->section_values = [];
             $this->classe_values = [];
         }
-
-        $this->options_values = null;
-    }
+             $this->options_values = null;
+        }
 
     public function resetfiled(){
 
@@ -140,15 +138,11 @@ class FormInscription extends Component
             'id_student' => $students->id
            ]);
 
-           //$this->resetfiled();
-
-           session()->flash('message','Reservation reussi');
-
-
+            $this->resetfiled();
+            $this->form_view =false;
+            session()->flash('message','Merci pour la reservation');
         } catch (\Exception $e) {
-
-            dd($e);
-            //session()->flash('message','Reservation echouee');
+        session()->flash('message','Reservation echouee');
         }
     }
 
