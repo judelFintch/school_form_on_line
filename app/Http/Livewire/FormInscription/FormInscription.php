@@ -20,23 +20,23 @@ class FormInscription extends Component
 
         $sectionData = [
             1 => [
-                'options' => ['Creche'],
+                'options' => ["pas d'option"],
                 'classe' => ['1']
             ],
             2 => [
-                'options' => ['Pre-mat'],
+                'options' => ["pas d'option"],
                 'classe' => ['1']
             ],
             3 => [
-                'options' => ['Maternelle'],
+                'options' => ["pas d'option"],
                 'classe' => ['1', '2', '3']
             ],
             4=> [
-                'options' => ['Primaire'],
+                'options' => ["pas d'option"],
                 'classe' => ['1', '2', '3', '4', '5', '6']
             ],
             5 => [
-                'options' => ['Enseignement de base'],
+                'options' => ["pas d'option"],
                 'classe' => ['7', '8']
             ],
             6 => [

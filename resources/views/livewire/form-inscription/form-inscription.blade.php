@@ -174,7 +174,7 @@
                             </select>
 
 
-                            @json($options_values)
+                            
                         </div>
                         <div class="space-y-2">
                             <label for="contact1" class="text-gray-600">Classe : *</label>
