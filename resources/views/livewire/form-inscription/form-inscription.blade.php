@@ -1,17 +1,17 @@
 <div>
+    
 
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
             @if (session()->has('message'))
             <div class="alert alert-success">
-                <h1 class="text-2xl font-bold text-gray-900"> {{ session('message') }}  pour une autre reservation <a href="{{route('form.index')}}">cliquez ici</a></h1>
+                <h1 class="text-2xl font-bold text-gray-900" > {{ session('message') }}  pour une autre reservation <a href="{{route('form.index')}}"><span style="color: green;"> Ici</span></a></h1>
             </div>
             @endif
         </div>
     </section>
 
     @if($form_view)
-
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
             <div class="pb-10">
@@ -20,8 +20,6 @@
                 </h1>
                 <p class="text-xl font-bold text-gray-900">Annee scolaire : 2023-2024</p>
             </div>
-
-
             <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200">
                 <h2 class="text-xl font-bold text-gray-900 mb-5">
                     IDENTITE DE L'ELEVE
@@ -96,7 +94,7 @@
                         <div class="space-y-2">
                             <label for="pays-origine" class="text-gray-600">Pays d'origine :* </label>
                             <input wire:model='st_pays' type="text" name="pays-origine" id="pays-origine"
-                                autocomplete="pays-origine" placeholder="Haut lomami"
+                                autocomplete="pays-origine" placeholder="Pays d'origine" 
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_pays') is-invalid @enderror" />
                             @error('st_pays') <span class="error">{{ $message }}</span> @enderror
                         </div>

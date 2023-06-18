@@ -97,8 +97,8 @@ class FormInscription extends Component
 
     public function render()
     {
-        $section = $this->section;
-        return view('livewire.form-inscription.form-inscription', compact('section'));
+        
+        return view('livewire.form-inscription.form-inscription');
     }
 
     public function store()
@@ -140,7 +140,7 @@ class FormInscription extends Component
 
             $this->resetfiled();
             $this->form_view =false;
-            session()->flash('message','Merci pour la reservation');
+            session()->flash('message','Merci pour la réservation');
         } catch (\Exception $e) {
         session()->flash('message','Reservation echouee');
         }
