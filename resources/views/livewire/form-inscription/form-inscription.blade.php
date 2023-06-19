@@ -54,7 +54,7 @@
                 <h1 class="text-2xl font-bold text-gray-900">
                     Formulaire de demande d'inscription
                 </h1>
-                <p class="text-xl font-bold text-gray-900">Annee scolaire : 2023-2024</p>
+                <p class="text-xl font-bold text-gray-900">Annee scolaire : 2023-2024(+243 971 06 495)</p>
             </div>
             <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200">
                 <h2 class="text-xl font-bold text-gray-900 mb-5">
