@@ -138,11 +138,11 @@ class FormInscription extends Component
             'id_student' => $students->id
            ]);
 
-            $this->resetfiled();
+            //$this->resetfiled();
             $this->form_view =false;
-            session()->flash('message','Merci pour la réservation');
+            session()->flash('message','true');
         } catch (\Exception $e) {
-        session()->flash('message','Reservation echouee');
+        session()->flash('message','false');
         }
     }
 

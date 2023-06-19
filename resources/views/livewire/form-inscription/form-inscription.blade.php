@@ -1,16 +1,53 @@
 <div>
+@if (session()->has('message'))
+    <section class="">
+            <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-2xl mx-auto w-full">
+                <!-- component -->
+                <div class="h-[calc(100dvh-4rem)] flex items-center justify-center">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200 ">
+                        <svg viewBox="0 0 24 24" class="text-green-600 w-16 h-16 mx-auto my-6">
+                            <path fill="currentColor"
+                                d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z">
+                            </path>
+                        </svg>
+                        @if(session('message')==true)
+                            <div class="text-center space-y-5">
+                                <h4 class="text-2xl sm:text-4xl font-bold text-gray-900 text-center">Inscription reussi</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <p class=""> {{ session('message') }} </p>
+                            
+                                </div>
+                                <br>
+                                <div class=" text-center">
+                                    <a href="{{route('form.index')}}" class="px-4 py-2.5 rounded-lg outline-none bg-blue-600 text-white transition hover:bg-blue-700 focus:bg-blue-500">
+                                        Retour
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
 
-    <section class="mt-10 md:mt-12">
-        <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
-            @if (session()->has('message'))
-            <div class="alert alert-success">
-                <h1 class="text-2xl font-bold text-gray-900" > {{ session('message') }}  pour une autre reservation <a href="{{route('form.index')}}"><span style="color: green;"> Ici</span></a></h1>
+                        @if(session('message')==false)
+                            <div class="text-center space-y-5">
+                                <h4 class="text-2xl sm:text-4xl font-bold text-gray-900 text-center">Inscription reussi</h4>
+                                <div class="space-y-2 text-gray-600">
+                                    <p class=""> Merci ! pour la réservation </p>
+                            
+                                </div>
+                                <br>
+                                <div class=" text-center">
+                                    <a href="{{route('form.index')}}" class="px-4 py-2.5 rounded-lg outline-none bg-blue-600 text-white transition hover:bg-blue-700 focus:bg-blue-500">
+                                        Retour
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
             </div>
-            @endif
-        </div>
-    </section>
-
-    @if($form_view)
+        </section>
+@endif
+   
+@if($form_view)
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
             <div class="pb-10">
