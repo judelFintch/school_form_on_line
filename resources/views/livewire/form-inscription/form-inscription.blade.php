@@ -1,5 +1,4 @@
 <div>
-    
 
     <section class="mt-10 md:mt-12">
         <div class="px-4 sm:px-10 md:px-12 lg:px-10 max-w-4xl mx-auto w-full">
@@ -28,11 +27,11 @@
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div class="space-y-2">
                             <label for="name" class="text-gray-600">Nom complet</label>
-                            <input wire:model='st_name' type="text" name="name" id="name" autocomplete="name"
+                            <input  wire:model='st_name' type="text" name="name" id="name" autocomplete="name"
                                 placeholder=" Ex Guy kode"
-                                class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_name') is-invalid @enderror" />
+                                class="peer outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:border-2 invalid:border-red-400 focus:border-blue-400  @error('st_name') is-invalid @enderror" />
 
-                            @error('st_name') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_name') <span class="text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
                             <label for="email" class="text-gray-600">Genre</label>
@@ -42,7 +41,7 @@
                                 <option value="masculin">Masculin</option>
                                 <option value="feminin">Feminin</option>
                             </select>
-                            @error('st_sexe') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_sexe') <span class="text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -50,12 +49,13 @@
                             <input wire:model='st_birthdate' type="date" name="name" id="name" autocomplete="name"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_birthdate') is-invalid @enderror" />
                         </div>
+                       
                         <div class="space-y-2">
                             <label for="email" class="text-gray-600">Lieu de naissance</label>
                             <input wire:model='st_birthdayplace' type="text" name="name" id="name" autocomplete="name"
                                 placeholder="Lubumbashi"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_birthdayplace') is-invalid @enderror" />
-                            @error('st_birthdayplace') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_birthdayplace') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -63,7 +63,7 @@
                             <input wire:model='st_spoken' type="text" name="name" id="name" autocomplete="name"
                                 placeholder="Swahili, Francais, Anglais"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_spoken') is-invalid @enderror" />
-                            @error('st_spoken') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_spoken') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -71,7 +71,7 @@
                             <input wire:model='st_phone' type="tel" name="name" id="name" autocomplete="name"
                                 placeholder="+243 09 76 93 80 94"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  @error('st_phone') is-invalid @enderror" />
-                            @error('st_phone') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_phone') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -79,7 +79,7 @@
                             <input wire:model='st_province' type="text" name="province-origine" id="province-origine"
                                 autocomplete="province-origine" placeholder="Province "
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_province') is-invalid @enderror" />
-                            @error('st_province') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_province') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -87,7 +87,7 @@
                             <input wire:model='st_district' type="text" name="district-origine" id="district-origine"
                                 autocomplete="district-origine" placeholder="District"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_district') is-invalid @enderror" />
-                            @error('st_district') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_district') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
 
@@ -96,14 +96,14 @@
                             <input wire:model='st_pays' type="text" name="pays-origine" id="pays-origine"
                                 autocomplete="pays-origine" placeholder="Pays d'origine" 
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_pays') is-invalid @enderror" />
-                            @error('st_pays') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_pays') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2 sm:col-span-2">
                             <label for="adresse-p" class="text-gray-600">Adresse physique de l'éléve </label>
                             <input wire:model='st_addres' type="text" name="adresse-p" id="adresse-p"
                                 autocomplete="adresse-p" placeholder="Q/Kasapa, Av circulaire, No 293"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('st_addres') is-invalid @enderror" />
-                            @error('st_addres') <span class="error">{{ $message }}</span> @enderror
+                            @error('st_addres') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                     </div>
                 </div>
@@ -120,21 +120,21 @@
                             <input wire:model='first_parent_name' type="text" name="name-father" id="name-father"
                                 autocomplete="name" placeholder="Nom titeur"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_parent_name') is-invalid @enderror" />
-                            @error('first_parent_name') <span class="error">{{ $message }}</span> @enderror
+                            @error('first_parent_name') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
                             <label for="name-mother" class="text-gray-600">Nom du second titeur:*</label>
                             <input wire:model='second_parent_name' type="text" name="name-mother" id="name-mother"
                                 autocomplete="name" placeholder="Nom titeur "
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('second_parent_name') is-invalid @enderror" />
-                            @error('second_parent_name') <span class="error">{{ $message }}</span> @enderror
+                            @error('second_parent_name') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
                             <label for="contact1" class="text-gray-600">Contact Titeur</label>
                             <input wire:model='first_contact' type="tel" name="contact1" id="contact1"
                                 autocomplete="name" placeholder="Contact titeur 1"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror" />
-                            @error('first_contact') <span class="error">{{ $message }}</span> @enderror
+                            @error('first_contact') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
                             <label for="contact2" class="text-gray-600">Contact Second Titeur</label>
@@ -165,7 +165,7 @@
                                 <option value="6">Secondaire General</option>
                                 <option value="7">Secondaire Technique</option>
                             </select>
-                            @error('section') <span class="error">{{ $message }}</span> @enderror
+                            @error('section') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
 
                         </div>
                         <div class="space-y-2">
@@ -178,7 +178,7 @@
                                 <option value="{{$option}}">{{$option}}</option>
                                 @endforeach
                             </select>
-                            @error('options_values') <span class="error">{{ $message }}</span> @enderror
+                            @error('options_values') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
 
 
 
@@ -194,7 +194,7 @@
                                 @endforeach
 
                             </select>
-                            @error('classe') <span class="error">{{ $message }}</span> @enderror
+                            @error('classe') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
 
                     </div>
