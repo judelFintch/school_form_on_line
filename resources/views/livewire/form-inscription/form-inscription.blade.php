@@ -160,23 +160,23 @@
                             @error('first_parent_name') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="name-mother" class="text-gray-600">Nom du second titeur:*</label>
+                            <label for="name-mother" class="text-gray-600">Nom du second tuteur:*</label>
                             <input wire:model.defer='second_parent_name' type="text" name="name-mother" id="name-mother"
-                                autocomplete="name" placeholder="Nom titeur "
+                                autocomplete="name" placeholder="Nom tuteur "
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('second_parent_name') is-invalid @enderror" />
                             @error('second_parent_name') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="contact1" class="text-gray-600">Contact Titeur</label>
+                            <label for="contact1" class="text-gray-600">Contact Tuteur</label>
                             <input wire:model.defer='first_contact' type="tel" name="contact1" id="contact1"
-                                autocomplete="name" placeholder="Contact titeur 1"
+                                autocomplete="name" placeholder="Contact tuteur 1"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400 @error('first_contact') is-invalid @enderror" />
                             @error('first_contact') <span class=" text-sm text-red-600 peer-invalid:block">{{ $message }}</span> @enderror
                         </div>
                         <div class="space-y-2">
-                            <label for="contact2" class="text-gray-600">Contact Second Titeur</label>
+                            <label for="contact2" class="text-gray-600">Contact Second Tuteur</label>
                             <input wire:model.defer='second_contact' type="tel" name="contact2" id="contact2"
-                                autocomplete="name" placeholder="Nom titeur 2"
+                                autocomplete="name" placeholder="Nom tuteur 2"
                                 class="outline-none block w-full rounded-xl border-2 border-gray-100 bg-gray-100 px-4 py-2.5 text-sm md:text-base text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:border-blue-400  " />
                         </div>
                     </div>
